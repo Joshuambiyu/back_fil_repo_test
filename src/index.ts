@@ -1,11 +1,11 @@
 //closures
 function closure() {
     let a = 100
-    return function (a: number) {
+    return function () {
         return a++
     }
 }
 
-
-closure()
-closure()
+const makeClosure = closure()
+console.log(makeClosure())
+console.log(makeClosure())
