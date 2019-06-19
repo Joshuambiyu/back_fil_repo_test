@@ -22,5 +22,8 @@ function createBankAccount<T extends number>(owner: string, initialBalance: T) {
     };
 }
 // account creation usage
-const bankUsage = createBankAccount("Joshua", 100)
+let bankUsage = createBankAccount<number>("Joshua", 100)
+//account deposit and check balance
 console.log(bankUsage.deposit(100).getBalance())
+//account withdrawal and check balance
+console.log(bankUsage.withdraw(50)?.getBalance())
